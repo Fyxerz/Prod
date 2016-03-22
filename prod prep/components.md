@@ -1,5 +1,20 @@
 # Components
 
++ Markdown Parsing
++ Native runner.
++ JavaScript interpreter (Node)
++ Spell checker
++ Export formats (PDF, HTMl, Rich Text?)
++ Toolbar - Inserting elements
++ Writing and reading files.
++ Preview generation
++ View menu - Modify UI
++ Cloud linking - Google, Dropbox, OneDrive?
++ Modify output UI
++ Keybindings
++ Markdown extenston - Text align...
+
+
 ## MD Parsing
 + Entity parsing - Check on br
 	+ Headings (h1)
@@ -25,7 +40,7 @@
     	+ if table[rows asterisk columns]
     	+ changeable on actual preview.
 
-+ Inline texst entities - Check all characters
++ Inline text entities - Check all characters
 	+ Bold (b)
 		+ Start on asterisk end at next one.
 	+ Italic (i)
@@ -37,7 +52,7 @@
 	+ Underline (u)
 		+ Start on double underscore end on next one. 
 
-+ Parsing on parsing 
++ Parsing on parsed content
 	+ Everything generated on parsing creates a span
 	+ span is given a class type depending on parsing of md
 	+ parse content within span, not span => if start of span has changed, change class of span.
