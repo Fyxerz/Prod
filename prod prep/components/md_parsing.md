@@ -1,26 +1,10 @@
-# Components
+# MD Parsing
 
-+ Markdown Parsing
-+ Native runner.
-+ JavaScript interpreter (Node)
-+ Spell checker
-+ Export formats (PDF, HTMl, Rich Text?)
-+ Toolbar - Inserting elements
-+ Writing and reading files.
-+ Preview generation
-+ View menu - Modify UI
-+ Cloud linking - Google, Dropbox, OneDrive?
-+ Modify output UI
-+ Keybindings
-+ Markdown extenston - Text align...
-
-
-## MD Parsing
-+ Entity parsing - Check on br
-	+ Headings (h1)
-		+ If first character == '#' => h entity
-		+ Check how many '#' thre are.
-		+ For each '#' there is =  h + #n
+## Entity parsing - Check on br
+    + Headings (h1)
+    	+ If first character == '#' => h entity
+    	+ Check how many '#' thre are.
+    	+ For each '#' there is =  h + #n
     + Paragraphs (p)
     	+ If first character !== '#', '+', '-', 'num.' => p entity
     	+ Close p element when double br
@@ -38,9 +22,9 @@
     	+ showcase of image immediately below
     + Table (table)
     	+ if table[rows asterisk columns]
-    	+ changeable on actual preview.
+    	+ changeable on actual preview because it creates and actual table.
 
-+ Inline text entities - Check all characters
+## Inline text entities - Check all characters
 	+ Bold (b)
 		+ Start on asterisk end at next one.
 	+ Italic (i)
@@ -52,12 +36,13 @@
 	+ Underline (u)
 		+ Start on double underscore end on next one. 
 
-+ Parsing on parsed content
+
+## Parsing on parsed content
 	+ Everything generated on parsing creates a span
 	+ span is given a class type depending on parsing of md
 	+ parse content within span, not span => if start of span has changed, change class of span.
 
-
-
-[popasodpasodapsoda](asadas)
-
+## Previewing
+    + If elements are text entities then syntax highlight markdown key characters and add classes to entities
+    + If elements are not text entities or have extra meta information and are block then create a new line just below the original  with preview.
+        + If elements are inline then create preview after MD.
