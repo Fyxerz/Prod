@@ -46,3 +46,18 @@
     + If elements are text entities then syntax highlight markdown key characters and add classes to entities
     + If elements are not text entities or have extra meta information and are block then create a new line just below the original  with preview.
         + If elements are inline then create preview after MD.
+
+
+Building a custom made MarkDown parser will take longer than anticipated, which means that it will require more resources that are available in order to meet the MVP deadline. While the MD parser was one of the primary focuses for the application, it was only adding an aesthetic value, that while a strong addition, is not essential for the functioning of the product. Because of this, for the MVP the custom made MarkDown parser wiill be replaced with an already made parsing component in order to spend more time in the more critical components that the program needs for it to work.
+
+# Markdown-js
+
+Markdown JS does parsing just fine, and works very fast and with a good node support. It doesn't have any extra features, so applying syntax highlighting or extra features doesn't come naturally. The options system is also a bit counter intuitive and seems over complicated.
+
+# Remarkable
+
+Remarkable works as well as Markdown-js but it has compatibility with hilghlight.js, a syntax highlighting component, which makes it quite extensible. This extension is quite customizable but it also becomes a bit of a mess when working with it as it allows for many options that are not necessary for a markdown editor. The options menu is surprisingly strong and easy to use. It uses an OOP approach that would fit very well as a node component.
+
+# Marked
+
+Marked seems like the most limited component, but it does exactly what it's required for the program. The options menu is very similar to the way markable is built and it also has functionality with highlight.js. However, it understands that the component is only for markdown so focuses all of the options and configuratibility into just markdown. This makes Marked perfect for the job, as it is lightweight, straight to the point and does everything that is required.
